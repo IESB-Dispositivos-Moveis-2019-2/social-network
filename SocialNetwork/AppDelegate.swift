@@ -14,7 +14,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupAppearance()
         return true
+    }
+    
+    private func setupAppearance() {
+        let tabBar = UITabBar.appearance()
+        tabBar.barTintColor = UIColor.purple
+        tabBar.tintColor = UIColor.yellow
+        tabBar.unselectedItemTintColor = UIColor.white
+        tabBar.isTranslucent = false
+        
+        let navBar = UINavigationBar.appearance()
+        navBar.barTintColor = UIColor.yellow
+        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        
     }
 
     // MARK: UISceneSession Lifecycle
